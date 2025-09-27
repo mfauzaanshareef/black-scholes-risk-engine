@@ -2,7 +2,7 @@
 Black–Scholes pricing (with continuous dividend yield) and d1/d2 helpers.
 No external dependencies beyond the Python stdlib and math.
 """
-from __future__ import annotations
+# from __future__ import annotation
 import math
 from dataclasses import dataclass
 
