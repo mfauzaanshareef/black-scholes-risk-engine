@@ -1,5 +1,5 @@
 # Black Scholes Risk & Pricing Engine
-A Python-based quantitative finance toolkit designed to price European options, calculate Implied Volatility (IV), and compute Black-Scholes Greeks. The project aims to simulate portfolio risk, validate prices via Monte Carlo methods, and analyze Delta-hedging strategies.
+A Python-based quantitative finance toolkit designed to price European options, calculate Implied Volatility (IV), compute Black-Scholes Greeks, and simulate portfolio risk. The project features a dynamic Delta-Hedging Engine that rebalances portfolios daily to maintain delta neutrality, calculating and comparing the Profit & Loss (P&L) of a fully hedged strategy versus an unhedged position. Future updates will include visualising implied volatility and term structures. Monte carlo validation will also be carried out for black-scholes prices.
 ## 📂 Project Structure
 
 * **`bs_pricer.py`**: Core Black-Scholes-Merton pricing logic for Calls and Puts (handling continuous dividend yields). Implements `d1` and `d2` calculations using standard libraries.
@@ -7,6 +7,7 @@ A Python-based quantitative finance toolkit designed to price European options, 
 * **`greeks.py`**: Analytical formulas for option sensitivities: Delta ($\Delta$), Gamma ($\Gamma$), Vega ($\nu$), Theta ($\Theta$), and Rho ($\rho$).
 * **`generate_options_chain.py`**: A script that fetches real-time spot prices (via `yfinance`), generates synthetic option chains with specific moneyness grids, and calculates theoretical prices/IVs.
 * **`stocks.py`**: A configuration file containing the ticker universe grouped by GICS sectors.
+* **`delta_hedge.py`**: A dynamic simulation engine for delta-neutral strategies. It simulates future stock price paths (using Geometric Brownian Motion), performs daily portfolio rebalancing by trading the underlying asset, handles option expirations, and generates a final Profit & Loss (P&L) report.
 * **`utils.py`**: Helper functions for date handling (year fractions, business days) and numerical bounds.
 
 ## 🚀 Configuration & Data Generation
@@ -93,8 +94,6 @@ Explanation of Examples
 
 The following features are currently planned but **not yet implemented**:
 
-- [ ]  **Implement Delta Hedging**: Create a simulation engine to keep the portfolio delta-neutral at a daily granularity by buying/selling the underlying stock.
 - [ ]  **Visualization**: Plot Implied Volatility smiles and term structures based on the generated data.
-- [ ]  **P&L Analysis**: Compute and compare returns for hedged vs. unhedged portfolios.
 - [ ]  **Monte Carlo Validation**: Carry out Monte Carlo simulations to cross-validate the analytical Black-Scholes prices.
 
