@@ -1,4 +1,2 @@
-- Implement delta hedging
 - Plot implied vol smiles and term structures
-- Compute returns when hedged vs. unhedged
 - Carry out monte carlo simulation to validate the prices
