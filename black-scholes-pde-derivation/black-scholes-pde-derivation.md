@@ -1,9 +1,12 @@
-# General Assumptions
+# Black-Scholes PDE Derivation
+
+## General Assumptions
 - We assume a constant risk free rate and constant volatility.
 - The underlying stock doesn't pay any dividends.
 - Frictionless markets: there are no transaction costs.
-- Continuous trading: we can buy and sell any amount of stock, even frictional amounts.
-# Method 1
+- Continuous trading: we can buy and sell any amount of stock, even frictional amounts.  
+
+## Derivation
 
 ### 1. Assume that the price of the stock follows a GBM
 
